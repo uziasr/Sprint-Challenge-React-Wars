@@ -21,6 +21,10 @@ const NameSpace = styled.div`
     align-items: center;
     color:yellow;
 `
+const Description = styled.p`
+    width:70%;
+    margin: 2% auto;
+`
 
 export default function CharacterCard(props){
     return (
@@ -30,7 +34,7 @@ export default function CharacterCard(props){
             <p>Born: {props.birth}</p>
         </NameSpace>
         <div>
-            <p>Hello, my name is {props.name}, I have {props.eye_color} colored eyes. I am a {props.gender} wtih {props.hair_color} hair</p>
+            <Description>Hello, my name is {props.name}, I have {props.eye_color} colored eyes. I am a {props.gender} wtih {props.hair_color} hair</Description>
         </div>
     </CardWrapper>
 

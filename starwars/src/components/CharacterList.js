@@ -17,6 +17,9 @@ const Button = styled.button`
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: black 1px solid;
+    ${({ active }) => active && `
+    display:none;
+  `}
 
 `
 export function CharacterList(){
@@ -71,8 +74,8 @@ export function CharacterList(){
                 },)}
             </ContentWrapper>
             <div>
-                <Button onClick={()=>viewPrevious()}>Previous</Button>
-                <Button onClick={()=>viewNext()}>Next</Button>
+                <Button active={!previousStatus} onClick={()=>viewPrevious()}>Previous</Button>
+                <Button active={!nextStatus} onClick={()=>viewNext()}>Next</Button>
             </div>
         </div>
         
