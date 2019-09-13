@@ -64,7 +64,6 @@ export function CharacterList(){
 
 
     return(
-        // <CharacterCard name={characterState.name} birth={characterState.birth_year} eye_color={characterState.eye_color} gender={characterState.gender} hair_color={characterState.hair_color}/>
         <div>
             <ContentWrapper>
                 {characterState.map((character, ind)=>{
