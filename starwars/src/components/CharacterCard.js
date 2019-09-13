@@ -11,7 +11,8 @@ const CardWrapper = styled.div`
     width: 30%;
     margin: 4%;
     border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
 
 `
 const NameSpace = styled.div`
@@ -32,4 +33,5 @@ export default function CharacterCard(props){
             <p>Hello, my name is {props.name}, I have {props.eye_color} colored eyes. I am a {props.gender} wtih {props.hair_color} hair</p>
         </div>
     </CardWrapper>
+
 )}

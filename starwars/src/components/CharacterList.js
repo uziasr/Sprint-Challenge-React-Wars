@@ -9,26 +9,20 @@ const ContentWrapper = styled.div`
     justify-content: center;
     flex-wrap: wrap;
 `
+const Button = styled.button`
+    margin: 4%;
+    padding: 2% 3%;
+    color: yellow;
+    background: black;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: black 1px solid;
 
-// export function CharacterList(){
-// const [characterState, setCharacterState] = useState({})
-// const [characterID, setCharacterID] = useState(1)
-// const sampleRange = 10;
-// useEffect(() =>
-// {    axios
-//     .get(`https://swapi.co/api/people/${characterID}/`)
-//     .then(response => setCharacterState(response.data))
-//     .catch(error=> console.log(error))
-// },[])
-// return(
-//     <CharacterCard name={characterState.name} birth={characterState.birth_year} eye_color={characterState.eye_color} gender={characterState.gender} hair_color={characterState.hair_color}/>
-//     // <h1>H</h1>
-// )
-// }
+`
 export function CharacterList(){
     const [characterState, setCharacterState] = useState([])
     const [characterPage, setCharacterPage] = useState(1)
-    const [characterID, setCharacterID] = useState(1)
+    // const [characterID, setCharacterID] = useState(1)
     const [nextStatus, setNextStatus] = useState(true)
     const [previousStatus, setPreviousStatus] = useState(false)
     const sampleRange = 10;
@@ -77,8 +71,8 @@ export function CharacterList(){
                 },)}
             </ContentWrapper>
             <div>
-                <button onClick={()=>viewNext()}>Next</button>
-                <button onClick={()=>viewPrevious()}>Previous</button>
+                <Button onClick={()=>viewPrevious()}>Previous</Button>
+                <Button onClick={()=>viewNext()}>Next</Button>
             </div>
         </div>
         
